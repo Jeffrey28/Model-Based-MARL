@@ -1,0 +1,16 @@
+*.*~
+__pycache__/
+*.pkl
+**/*.egg-info
+.python-version
+.idea/
+.vscode/
+.DS_Store
+_build/
+**/.ipynb_checkpoints
+**/*.pt
+**/checkpoints
+**/wandb
+**/ild.out
+/runs
+*.profile
