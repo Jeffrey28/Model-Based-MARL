@@ -2,17 +2,17 @@
 1. DMPO (Our method)
 2. DPPO (Decentralized PPO)
 4. CPPO (Centralized PPO)
-3. IA2C
 5. IC3Net
 
 * radius and radius_q: 
-    * The observable radius of p should be 1.
+    * The observable radius of p should be 1-5.
     * The V of each agent predicts the local reward.
     
 ## Environments:
 CACC Catchup, Slowdown.
 Ring Attenuation.
 Figure Eight.
+ATSC Grid
 
 
 ## Interface:
@@ -55,9 +55,9 @@ Our code uses WandB as logger. Before running our code, you should log in to Wan
 ```python
 python launcher.py --env ENV --algo ALGO --name NAME --para PARA
 ```
-`ENV` specifies which environment to run in, including `eight`, `ring`, `catchup`， `slowdown`.
+`ENV` specifies which environment to run in, including `eight`, `ring`, `catchup`， `slowdown`, `Grid` .
 
-`ALGO` specifies the algorithm to use, including `IA2C`, `IC3Net`, `CPPO`, `DPPO`, `DMPO`.
+`ALGO` specifies the algorithm to use, including `IC3Net`, `CPPO`, `DPPO`, `DMPO`.
 
 `NAME` is the additional name for the logger, which is set to `''` as default.
 
