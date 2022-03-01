@@ -7,7 +7,9 @@ import os
 import pdb
 from ..utils import listStack
 
-
+COLLISION_WT = 5
+COLLISION_HEADWAY = 10
+VDIFF = 5
 class CACCWrapper(gym.Wrapper):
     def __init__(self, config_path, bias=0, std=1, test=False):
         # k-hop
@@ -51,11 +53,11 @@ class CACCWrapper(gym.Wrapper):
             c_rewards = -COLLISION_WT * (np.minimum(self.hs_cur - COLLISION_HEADWAY, 0)) ** 2
         else:
             c_rewards = 0
-        rewards = h_rewards + v_rewards + u_rewards 
+        rewards = h_rewards + v_rewards + u_rewards + c_rewards
        # rewards = v_rewards
         if np.min(self.hs_cur) < self.h_min:
             self.collision = True
-            collided = hs_cur < self.h_min
+            collided = self.hs_cur < self.h_min
             for i in range(self.hs_cur.shape[0]):
                 if collided[i]:
                     rewards[i] -= self.G
