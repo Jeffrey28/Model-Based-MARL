@@ -64,9 +64,9 @@ python launcher.py --env ENV --algo ALGO --name NAME --para PARA
 `PARA` is the hyperparameter json string. The default parameters are loaded from config folder, and this would override specific parameters.
 
 ## Execution results of DPPO and DMPO in ATSC-Grid
-1. DPPO
+#DPPO
 https://user-images.githubusercontent.com/100258046/163685533-f85cd0ba-a3f6-457c-a35f-e13bfbe47481.mp4
-2. DMPO
+#DMPO
 https://user-images.githubusercontent.com/100258046/163685524-4b1a1ef7-3a01-44da-897e-b8f6f1d48d61.mp4
 
 
