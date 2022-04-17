@@ -63,8 +63,10 @@ python launcher.py --env ENV --algo ALGO --name NAME --para PARA
 
 `PARA` is the hyperparameter json string. The default parameters are loaded from config folder, and this would override specific parameters.
 
-## The Area to focus on in the demo
+## The area to focus on in videos
 ![ATSC-Grid Net](https://user-images.githubusercontent.com/100258046/163698362-627ebda9-1ea8-49dd-af7e-3145ac0bc175.png)
+The following videos show the capabilities of DPPO and DMPO in ATSC-Grid. In the key indicators on the left, "Insertion-backlogged vehicles" will gradually increase with the load of the traffic flow, and then gradually decrease with the effective decision of the traffic light. The maximum value of this indicator is 1486 in DPPO and 1033 in DMPO, which indicates that DMPO is more effective in solving traffic jams. Then we focused on three intersections where DMPO can make traffic jams last for less time
+
 
 ## Execution result of DPPO(Decentralized PPO) in ATSC-Grid
 https://user-images.githubusercontent.com/100258046/163685533-f85cd0ba-a3f6-457c-a35f-e13bfbe47481.mp4
