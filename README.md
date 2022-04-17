@@ -66,7 +66,7 @@ python launcher.py --env ENV --algo ALGO --name NAME --para PARA
 ## The area to focus on in videos
 ![ATSC-Grid Net](https://user-images.githubusercontent.com/100258046/163699030-7e9ad4f4-8f62-43ad-8825-4d7ffeb7df1f.png)
 
-This is the network structure of 5*5 intersections in ATSC-Grid and the highlighted area of the red frame is shown in the following videos, and it is also the key area for displaying execution result in DPPO and DMPO. In the key indicators on the left, "Insertion-backlogged vehicles" will gradually increase with the load of the traffic flow, and then gradually decrease with the effective decision of the traffic light. The maximum value of this indicator is 1486 in DPPO and 1033 in DMPO, which indicates that DMPO is more effective in solving traffic jams. Then we focused on three intersections where DMPO can make traffic jams last for less time
+This is the network structure of 5*5 intersections in ATSC-Grid and the highlighted area of the red frame is shown in the following videos. It is also the key area for displaying execution result in DPPO and DMPO. Through the key indicator "Insertion-backlogged vehicles" in the numerical panel on the left, we can observe that "Insertion-backlogged vehicles" will gradually increase with the load of the traffic flow, and then gradually decrease with the effective decision of the traffic light. The maximum value of this indicator is 1486 in DPPO and 1033 in DMPO, which indicates that DMPO is more effective in solving traffic jams. Then we focused on three intersections where DMPO can make traffic jams last for less time
 
 
 ## Execution result of DPPO(Decentralized PPO) in ATSC-Grid
