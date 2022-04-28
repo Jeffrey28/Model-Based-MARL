@@ -1,4 +1,4 @@
-## Algorithms:
+# Algorithms:
 1. DMPO (Our method)
 2. DPPO (Decentralized PPO)
 4. CPPO (Centralized PPO)
@@ -8,19 +8,19 @@
     * The observable radius of p should be 1-5.
     * The V of each agent predicts the local reward.
     
-## Environments:
+# Environments:
 CACC Catchup, Slowdown.
 Ring Attenuation.
 Figure Eight.
 ATSC Grid
 
 
-## Interface:
+# Interface:
 The state, reward, done should all be numpy arrays.
 For MARL, done should be given for each agent, although we assume they are the same.
 
-## Environment setup
-1. SUMO installation
+# Environment setup
+1. SUMO installation. Version 1.11.0
 
 The commit number of SUMO, available at https://github.com/eclipse/sumo used to run the results is 2147d155b1.
 To install SUMO, you are recommended to refer to https://sumo.dlr.de/docs/Installing/Linux_Build.html to install the specific version via repository checkout. Note that the latest version of SUMO is not compatible with Flow environments.
@@ -51,7 +51,7 @@ in terminal to include the SUMO python packages.
 
 Our code uses WandB as logger. Before running our code, you should log in to WandB locally. Please refer to https://docs.wandb.ai/quickstart for more detail.
 
-## Usage
+# Usage
 ```python
 python launcher.py --env ENV --algo ALGO --name NAME --para PARA
 ```
@@ -63,22 +63,28 @@ python launcher.py --env ENV --algo ALGO --name NAME --para PARA
 
 `PARA` is the hyperparameter json string. The default parameters are loaded from config folder, and this would override specific parameters.
 
-## Description of the following videos and execution results
+# Results in video
+## Description of the following videos and execution results in ATSC-Grid
 ![ATSC-Grid Net](https://user-images.githubusercontent.com/100258046/163699030-7e9ad4f4-8f62-43ad-8825-4d7ffeb7df1f.png)
+
+This is the network structure of 5*5 intersections in ATSC-Grid and the highlighted area of the red frame is shown in the following videos. It is also the key area for displaying execution result in DPPO and DMPO. Through the key indicator "Insertion-backlogged vehicles" in the numerical panel on the left, we can observe that "Insertion-backlogged vehicles" will gradually increase with the load of the traffic flow, and then gradually decrease with the effective decision of the traffic light. The maximum value of this indicator is 1486 in DPPO and 1033 in DMPO, which indicates that DMPO can reduce the backlog of vehicles at intersections. Therefore, compared with DPPO, DMPO is more effective in solving traffic jams. Then we focused on three intersections where DMPO can make traffic jams last for less time.
+
+
+### Execution result of DPPO(Decentralized PPO) in ATSC-Grid
+https://user-images.githubusercontent.com/100258046/163685533-f85cd0ba-a3f6-457c-a35f-e13bfbe47481.mp4
+
+### Execution result of DMPO(Our method) in ATSC-Grid
+https://user-images.githubusercontent.com/100258046/163685524-4b1a1ef7-3a01-44da-897e-b8f6f1d48d61.mp4
+
+## Description of the following videos and execution results in ATSC-Monaco
 ![Real Net_point](https://user-images.githubusercontent.com/100258046/165706303-07f5a934-f97d-4bf6-a04c-928f9ff0b9ff.png)
 
 This is the network structure of 5*5 intersections in ATSC-Grid and the highlighted area of the red frame is shown in the following videos. It is also the key area for displaying execution result in DPPO and DMPO. Through the key indicator "Insertion-backlogged vehicles" in the numerical panel on the left, we can observe that "Insertion-backlogged vehicles" will gradually increase with the load of the traffic flow, and then gradually decrease with the effective decision of the traffic light. The maximum value of this indicator is 1486 in DPPO and 1033 in DMPO, which indicates that DMPO can reduce the backlog of vehicles at intersections. Therefore, compared with DPPO, DMPO is more effective in solving traffic jams. Then we focused on three intersections where DMPO can make traffic jams last for less time.
 
 
-# Execution result of DPPO(Decentralized PPO) in ATSC-Grid
-https://user-images.githubusercontent.com/100258046/163685533-f85cd0ba-a3f6-457c-a35f-e13bfbe47481.mp4
-
-## Execution result of DMPO(Our method) in ATSC-Grid
-https://user-images.githubusercontent.com/100258046/163685524-4b1a1ef7-3a01-44da-897e-b8f6f1d48d61.mp4
-
-## Execution result of DPPO(Decentralized PPO) in ATSC-Monaco
+### Execution result of DPPO(Decentralized PPO) in ATSC-Monaco
 https://user-images.githubusercontent.com/100258046/165706056-cac77b41-e3af-4e2b-bda1-3e42f0b5ac17.mp4
 
-## Execution result of DMPO(Our method) in ATSC-Monaco
+### Execution result of DMPO(Our method) in ATSC-Monaco
 https://user-images.githubusercontent.com/100258046/165706098-d8cf2009-c7e6-4a7a-9040-c417d38cbeef.mp4
 
