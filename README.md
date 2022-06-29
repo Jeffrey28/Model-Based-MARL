@@ -1,10 +1,10 @@
-# Algorithms:
+# Algorithms
 1. DMPO (Our method)
 2. DPPO (Decentralized PPO)
 4. CPPO (Centralized PPO)
 5. IC3Net
     
-# Environments:
+# Environments
 1. CACC Catchup
 2. CACC Slowdown
 3. Ring Attenuation
@@ -89,6 +89,7 @@ https://user-images.githubusercontent.com/100258046/165706098-d8cf2009-c7e6-4a7a
 ## Description of the following videos in UAVFC
 ![UAVFC](https://user-images.githubusercontent.com/100258046/176516595-5e2cd6a1-16f2-4a33-b5df-7914c222868d.png)
 
+This is a 5×5 formation grid of UAV swarm. The objective of UAVFC is to reach the destination, avoid forest and maintain formation. We tested the performance of different algorithms under the same scenario. From the following videos, we can observe that the swarm of UAVs all approached their destination, avoided the trees and maintained the formation in DMPO, but in this process there are some UAVs out of the formation in CPPO.
 
 ### Execution results of DMPO(Our method) and CPPO(Centralized PPO) in UAVFC
 https://user-images.githubusercontent.com/100258046/176517489-0ec8aed1-7232-41a1-8c3f-5047225237db.mp4
