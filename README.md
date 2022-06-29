@@ -3,22 +3,15 @@
 2. DPPO (Decentralized PPO)
 4. CPPO (Centralized PPO)
 5. IC3Net
-
-* radius and radius_q: 
-    * The observable radius of p should be 1-5.
-    * The V of each agent predicts the local reward.
     
 # Environments:
-CACC Catchup, Slowdown.
-Ring Attenuation.
-Figure Eight.
-ATSC Grid, Monaco
-UAVFC
-
-
-# Interface:
-The state, reward, done should all be numpy arrays.
-For MARL, done should be given for each agent, although we assume they are the same.
+1. CACC Catchup
+2. CACC Slowdown
+3. Ring Attenuation
+4. Figure Eight
+5. ATSC Grid
+6. ATSC Monaco
+7. UAVFC
 
 # Environment setup
 1. SUMO installation. Version 1.11.0
