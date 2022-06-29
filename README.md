@@ -12,7 +12,8 @@
 CACC Catchup, Slowdown.
 Ring Attenuation.
 Figure Eight.
-ATSC Grid
+ATSC Grid, Monaco
+UAVFC
 
 
 # Interface:
@@ -55,7 +56,7 @@ Our code uses WandB as logger. Before running our code, you should log in to Wan
 ```python
 python launcher.py --env ENV --algo ALGO --name NAME --para PARA
 ```
-`ENV` specifies which environment to run in, including `eight`, `ring`, `catchup`， `slowdown`, `Grid` .
+`ENV` specifies which environment to run in, including `eight`, `ring`, `catchup`， `slowdown`, `Grid`, `Monaco`, `UAV_9d` .
 
 `ALGO` specifies the algorithm to use, including `IC3Net`, `CPPO`, `DPPO`, `DMPO`.
 
