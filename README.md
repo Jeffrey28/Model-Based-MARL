@@ -1,3 +1,9 @@
+
+# Decentralized Model-based Policy Optimization for Decentralized Networked Systems
+Code for the paper "Scalable Model-based Policy Optimization for Decentralized Networked Systems" in IROS 2022
+[arXiv](https://arxiv.org/abs/2207.06559)
+
+
 # Algorithms
 1. DMPO (Our method)
 2. DPPO (Decentralized PPO)
